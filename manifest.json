@@ -1,0 +1,8 @@
+{
+  "name": "西螺城市尋寶",
+  "short_name": "尋寶遊戲",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#020617",
+  "icons": [{ "src": "icon.png", "sizes": "512x512", "type": "image/png" }]
+}
