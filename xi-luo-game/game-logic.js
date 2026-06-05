@@ -453,22 +453,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 function saveToLocalStorage() {
     const saveState = {
-        playerName,
-        totalPenaltyMinutes,
-        completedLevels,
-        wrongAnswersTracker,
-        unlockedHints,
-        levelUsedSeconds,
-        isTimeUp,
-        isMainGameFinished,
-        isHiddenLevelUnlocked,
-        mainStartTimeStamp,
-        hiddenStartTimeStamp,
-        mainFrozenUsedSeconds,
-        mainActualUsedSeconds,
-        hiddenLevelSeconds,
-        remainingSeconds
+        playerName: playerName, // 建議明確指定 key: value
+        totalPenaltyMinutes: totalPenaltyMinutes,
+        completedLevels: completedLevels,
+        wrongAnswersTracker: wrongAnswersTracker,
+        unlockedHints: unlockedHints,
+        levelUsedSeconds: levelUsedSeconds,
+        isTimeUp: isTimeUp,
+        isMainGameFinished: isMainGameFinished,
+        isHiddenLevelUnlocked: isHiddenLevelUnlocked,
+        mainStartTimeStamp: mainStartTimeStamp,
+        hiddenStartTimeStamp: hiddenStartTimeStamp,
+        mainFrozenUsedSeconds: mainFrozenUsedSeconds,
+        mainActualUsedSeconds: mainActualUsedSeconds,
+        hiddenLevelSeconds: hiddenLevelSeconds,
+        remainingSeconds: remainingSeconds
     };
-    // 將所有變數打包成 JSON 字串，安全存入手機/瀏覽器暫存中
-    localStorage.setItem('xi_luo_treasure_save', JSON.stringify(saveState));
-}
+    
+    // 記得將資料轉成字串並存入 localStorage
+    localStorage.setItem('cityTreasureData', JSON.stringify(saveState));
+    console.log("遊戲進度已儲存");
+} // <--- 這裡一定要有一個閉合的括號    // 將所有變數打包成 JSON 字串，安全存入手機/瀏覽器暫存中
